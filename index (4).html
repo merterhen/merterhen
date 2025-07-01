@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VR Placeholder Scene</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #e0f7ff" vr-mode-ui="enabled: true" embedded>
+      <!-- Zonlicht en omgeving -->
+      <a-light type="ambient" intensity="0.8"></a-light>
+      <a-light type="directional" intensity="1" position="2 4 2"></a-light>
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#eeeeee"></a-plane>
+
+      <!-- Deur -->
+      <a-box position="0 1 0" depth="0.1" height="2" width="1" color="#8B4513"></a-box>
+
+      <!-- Placeholder vrouw -->
+      <a-entity gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Fox/glTF/Fox.gltf"
+                scale="0.02 0.02 0.02"
+                position="0 0 -2"
+                rotation="0 180 0">
+      </a-entity>
+
+      <!-- Camera -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 4"></a-entity>
+    </a-scene>
+  </body>
+</html>
